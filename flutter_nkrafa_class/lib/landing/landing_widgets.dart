@@ -5,7 +5,7 @@ SizedBox boxPad = SizedBox(height: boxPadding);
 
 Widget inputBox(String hintText, IconData icon) {
   return SizedBox(
-    width: 380,
+    width: 350,
     child: TextField(
       decoration: InputDecoration(
         prefixIcon: Icon(icon),
@@ -18,7 +18,7 @@ Widget inputBox(String hintText, IconData icon) {
 
 Widget button() {
   return SizedBox(
-      width: 380,
+      width: 350,
       child: ElevatedButton(
         onPressed: () {},
         child: const Text("Sign in"),

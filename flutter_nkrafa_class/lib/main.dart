@@ -25,8 +25,10 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.anuphanTextTheme(),
         ),
         home: Scaffold(
-          body: onMobile ? const LandingPage() : const OverSizePage(),
-          // body: FillInPage()
-        ));
+            // body: onMobile ? const LandingPage() : const OverSizePage(),
+            body: FillInPage(
+          year: 1,
+          section: 1,
+        )));
   }
 }

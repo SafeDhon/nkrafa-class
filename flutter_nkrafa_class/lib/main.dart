@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_nkrafa_class/constant.dart';
 import 'package:flutter_nkrafa_class/error/oversize_page.dart';
-import 'package:flutter_nkrafa_class/fillin/fillin_page.dart';
-import 'package:flutter_nkrafa_class/landing/landing_page.dart';
+import 'package:flutter_nkrafa_class/period/period_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -17,18 +16,18 @@ class MyApp extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
     bool onMobile = width < moBile;
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Class Room',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-          textTheme: GoogleFonts.anuphanTextTheme(),
-        ),
-        home: Scaffold(
-            // body: onMobile ? const LandingPage() : const OverSizePage(),
-            body: FillInPage(
-          year: 1,
-          section: 1,
-        )));
+      debugShowCheckedModeBanner: false,
+      title: 'Class Room',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        useMaterial3: true,
+        textTheme: GoogleFonts.promptTextTheme(),
+      ),
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: onMobile ? const PeriodPage() : const OverSizePage(),
+   
+      ),
+    );
   }
 }
